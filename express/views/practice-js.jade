@@ -1,0 +1,54 @@
+
+html(lang="en")
+  head
+    title Jesse Playing with Jade
+    script(type="text/javascript")
+      var jade = require('jade');
+      var fn = jade.compile(jadeTemplate);
+      var htmlOutput = fn ({
+        maintainer: {
+          name: 'Jesse Seaver', 
+          twitter: 'jesseseaver', 
+          blog: 'jesseseaver.blog'
+        }
+      });
+
+  body
+    div 
+    address
+    i
+    strong
+    h1#title Welcome to Jade
+    button.btn(data-action="bea") Awesome
+    p.
+    This is the shortest way if you have a large block of text that you need within jade on multiple lines.
+
+    h1
+    | Maintainer: 
+    = ' ' + maintainer.name
+    table
+    tr 
+      td Twitter 
+      td= maintainer.twitter
+    tr
+      td Blog 
+      td= maintainer.blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

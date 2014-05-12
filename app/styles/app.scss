@@ -20,3 +20,14 @@ body, html {
   margin-bottom: 0;
 }
 
+//Saas Variables
+
+$base-padding: 5px 0 20px 0;
+$default-border: 10px blue solid;
+
+#headerBox { 
+text-align:center;
+padding:$base-padding;
+border:$default-border;
+}
+

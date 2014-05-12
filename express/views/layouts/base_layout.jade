@@ -1,4 +1,4 @@
-doctype
+doctype 
 html("data-ng-app"="BlocJams")
   head
     meta(charset='utf-8')
@@ -9,6 +9,8 @@ html("data-ng-app"="BlocJams")
     link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet")
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300' rel='stylesheet' type='text/css')
     link(rel='stylesheet', href='stylesheets/app.css')
+    //-Adding in full Bootsrap CDN for testing 
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
     block head
     script(src='/socket.io/socket.io.js')
     script(src='/javascripts/vendor.js')
@@ -18,5 +20,6 @@ html("data-ng-app"="BlocJams")
       require('scripts/app');
 
 
-  body
+
+
     block body
