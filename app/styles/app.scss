@@ -23,11 +23,12 @@ body, html {
 //Saas Variables
 
 $base-padding: 5px 0 20px 0;
-$default-border: 10px blue solid;
+$default-border: 10px;
 
+//Saas
 #headerBox { 
 text-align:center;
 padding:$base-padding;
-border:$default-border;
+border:(20px + $default-border) solid black;
 }
 
