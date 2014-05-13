@@ -16,18 +16,27 @@ extends layouts/base_layout.jade
 block head
 
 block body
-  div(class="row")
-    div(id="headerBox")
-      h1
-        |Span 4
-    div(class="span8 btn-warning")
-      h1
-        |Span 8
-  div(class="row")
-    div(class="span10")
-      |Span 10
-    div(class="span2")
-      |Span 3
+  .container
+    .row 
+      .col-md-2
+        div(id="headerBox")
+          |Span 2
+      .col-md-3
+        div(id="headerBox")
+          |Span 3
+      .col-md-7
+        div(id="headerBox")
+          |Span 7
+    .row
+      .col-md-4
+        div(id="headerBox")
+          |Span 4
+      .col-md-4
+        div(id="headerBox")
+          |Span 4
+      .col-md-4
+        div(id="headerBox")
+          |Span 4
     
 
 
