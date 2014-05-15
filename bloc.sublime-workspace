@@ -1,0 +1,558 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"style",
+				"stylesheet"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"ex",
+				"extends"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"get",
+				"getLikes"
+			],
+			[
+				"new",
+				"newLikes"
+			],
+			[
+				"update",
+				"updaterating"
+			],
+			[
+				"upd",
+				"updaterating"
+			],
+			[
+				"upda",
+				"updateRating"
+			],
+			[
+				"mo",
+				"movieLoop"
+			],
+			[
+				"h",
+				"href"
+			],
+			[
+				"showin",
+				"showingWhen"
+			],
+			[
+				"paddi",
+				"padding-left"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"font",
+				"font-variant"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"the",
+				"theObj"
+			],
+			[
+				"movie",
+				"movieLoop"
+			],
+			[
+				"show",
+				"showtimes"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"chat",
+				"chatSplit"
+			],
+			[
+				"je",
+				"jeffeBreak"
+			],
+			[
+				"js",
+				"jscolor"
+			],
+			[
+				"like",
+				"likes"
+			],
+			[
+				"w",
+				"weight"
+			],
+			[
+				"ti",
+				"tilla"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"on",
+				"onload"
+			],
+			[
+				"circle",
+				"circleRadius"
+			],
+			[
+				"pa",
+				"parseFloat"
+			],
+			[
+				"display",
+				"displayValue"
+			],
+			[
+				"displa",
+				"displayValue"
+			],
+			[
+				"cV",
+				"cValue"
+			],
+			[
+				"cValue",
+				"cValueDisplay"
+			],
+			[
+				"disp",
+				"displayResult"
+			],
+			[
+				"sen",
+				"sentence"
+			],
+			[
+				"count",
+				"countWords"
+			],
+			[
+				"sent",
+				"sentenceInput"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"coun",
+				"countWords"
+			],
+			[
+				"how",
+				"howManyWords"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"add",
+				"addend"
+			],
+			[
+				"inp",
+				"inputs"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"SC",
+				"script	Tag"
+			],
+			[
+				"an",
+				"answer"
+			],
+			[
+				"scoo",
+				"scoopsOfIcecream"
+			],
+			[
+				"quo",
+				"quoteArray"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"Ch",
+				"Chip"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/styles/app.scss",
+			"settings":
+			{
+				"buffer_size": 609,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "//- Hi! This is an example Jade file.\nextends layouts/base_layout.jade\n//- The '//-' at the start of these lines are comments that wont appear in the\n//- generated HTML.\n\n//-\n    Here's a link to Jade's homepage that you should use as an additional reference\n    http://jade-lang.com\n\n\n//- The `extends` keyword in Jade is used to reusable template\n    We'll cover this in more detail when building our Rdio clone.\n\n//- The `block` keyword is used to plug content into sections of your template.\n    We'll cover this in the Rdio clone.\nblock head\n\nblock body\n  .container\n    .row \n      .col-md-2.col-lg-2.col-sm-6.col-xs-12\n        div(id=\"headerBox\")\n          |Span 2\n      .col-md-3\n        div(id=\"headerBox\")\n          |Span 3\n      .col-md-7\n        div(id=\"headerBox\")\n          |Span 7\n    .row\n      .col-md-4\n        div(id=\"headerBox\")\n          |Span 4\n      .col-md-4\n        div(id=\"headerBox\")\n          |Span 4\n      .col-md-4\n        div(id=\"headerBox\")\n          |Span 4\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+			"file": "express/views/practice.jade",
+			"file_size": 989,
+			"file_write_time": 1399940556000000,
+			"settings":
+			{
+				"buffer_size": 1017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/stylesheets/app.css",
+			"settings":
+			{
+				"buffer_size": 136314,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/views/layouts/base_layout.jade",
+			"settings":
+			{
+				"buffer_size": 873,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 327.0,
+		"selected_items":
+		[
+			[
+				"package con",
+				"Package Control: Install Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 209.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/public/stylesheets/app.css",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/test.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/user.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/lab11-objective.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/practice.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/jesseseaver",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/random.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/lab11-objective--b.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/random.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/lab10-objective-constructor.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/lab10-objective.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/download/Scratch.plist",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/download/stylesheets/theme.css",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/stylesheets/fonts.css",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/stylesheets/theme.css",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/sftp-config.json",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/index.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/Drake Coker/www.scrathvinyl.com/getinthegroove/index.html",
+		"/Users/JTSeaver/Desktop/test",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/parsechat.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/scripts/jscolor/demo.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/L2-Objective1.html",
+		"/Users/JTSeaver/Desktop/2",
+		"/Users/JTSeaver/Desktop/1",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/Modern Javascript/guessinggame.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/mc-success2.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/mc-success.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/success.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/css/base.min.css",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/css/base.css",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/index.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/sftp-config.json",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/L8-Objective1.html",
+		"/Users/JTSeaver/Documents/WORK SET/Various Web/GFFmag/gffmag.com/splash/js/jquery.nicescroll.js",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/L6-Objective-2.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/Orielly/L6-Objective-1.html",
+		"/Users/JTSeaver/Library/Application Support/Sublime Text 2/Packages/View In Browser/View In Browser.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"grey-background orange-text",
+			"download",
+			"tilla",
+			"pickles",
+			"tilla",
+			"h1 { font-sze",
+			"65px",
+			"sentence",
+			"Sentence",
+			"sentence"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/styles/app.scss",
+					"settings":
+					{
+						"buffer_size": 609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								224,
+								224
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "express/views/practice.jade",
+					"settings":
+					{
+						"buffer_size": 1017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								625,
+								625
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/stylesheets/app.css",
+					"settings":
+					{
+						"buffer_size": 136314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136189,
+								136198
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "express/views/layouts/base_layout.jade",
+					"settings":
+					{
+						"buffer_size": 873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								8
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 202.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"L2-Objective1.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true
+}

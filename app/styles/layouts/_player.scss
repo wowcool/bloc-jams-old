@@ -1,0 +1,23 @@
+// Create a Saas variable for the default player footer height
+$default-player-footer-height : 100px;
+//Create the player body container class 
+.player-body-container { 
+	min-height:100%;
+	padding-bottom: $default-player-footer-height;
+	color:white;
+	a {color:white};
+//Pull in a Bourbon color schema
+	@include background(radial-gradient($very-light-background-purple, $dark-background-purple));
+}
+//Style headers and footers
+.default-player-header, .default-player-footer { 
+	background-color: rgba($medium-purple, .5);
+}
+//Header only styling
+.default-player-header { 
+	@include font-open-sans(600);
+}
+//Footer only styling
+.default-player-footer { 
+	height: $default-player-footer-height;
+}
