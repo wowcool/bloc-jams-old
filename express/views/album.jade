@@ -13,6 +13,28 @@ block content
 		.row
 			.col-md-12
 				table.table.album-song-listing
+					
+					//- Create the array
+					each colorName, index in ['Blue','Green','Red','Pink', 'Magenta', 'Burgandy']
+						//-Create Loop Body 
+						tr
+							td
+								//-Add the variable for the index value. 
+								|#{index + 1}
+							td
+								//-Add the variable for color
+								|#{colorName}
+							//-Playing with Jade Mixin's
+							mixin time(length)
+								td.time Track Length : #{length}
+							td
+								+time(3+ ":" + 43)
+	
+					
+
+
+
+
 					//- Table Written out without a Loop
 					//- table.table.album-song-listing
 
@@ -37,19 +59,7 @@ block content
 					//- 		td Magenta
 							td 2:90
 
-					//- And re-written using a Jade Loop instead
-					//- Create the array
-					each colorName, index in ['Blue','Green','Red','Pink', 'Magenta']
-						//-Create Loop Body 
-						tr
-							td
-								//-Add the variable for the index value. 
-								|#{index + 1}
-							td
-								//-Add the variable for color
-								|#{colorName}
-							td
-								|X:XX
+					//- And re-written using a Jade Loop instead	
 
 
 
