@@ -1,2 +1,40 @@
 // SASS stylings for the 'album' view.
-
+// Add margin to the Album Header
+// Question Response : We use a margin instead of a padding because a 
+//                     padding will change depending on the width, and 
+//					   the margin will stay fixed? difference between 
+//					   padding and margin is that margins auto-collapse, 
+//					   and padding doesn't.
+.album-header-container { 
+	margin-top:55px;
+	margin-bottom:25px;
+}
+//Style Right Side
+.album-header-information { 
+	margin-top: 45px; 
+	margin-bottom: 20px;
+}
+.album-title, .album-artist, .album-meta-info { 
+	line-height: 150%; 
+}
+//Set the Album Info Fonts 
+.album-title { 
+	font-size: 48px; 
+	@include font-open-sans(300);
+}
+.album-artist { 
+	font-size: 24px; 
+	@include font-open-sans(700); 
+}
+.album-meta-info { 
+	font-size: 16px; 
+	@include font-open-sans(500);
+}
+//Style Song Listing 
+.table.album-song-listing { 
+	@include font-open-sans(300);
+	td { 
+		padding: 20px;
+		border-top:
+	}
+}

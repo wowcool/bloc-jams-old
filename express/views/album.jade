@@ -1,3 +1,57 @@
 extends layouts/player_layout
 
 block content
+	.container.album-container
+		.row.album-header-container
+			.col-md-3
+				img(src="/images/album-placeholder.png")
+			.col-md-9.col-md-push-1
+				.album-header-information
+					h3.album-title The Colors
+					h4.album-artist Pablo Picasso
+					h5.album-meta-info 1881 on Cubism
+		.row
+			.col-md-12
+				table.table.album-song-listing
+					//- Table Written out without a Loop
+					//- table.table.album-song-listing
+
+					//- 	tr
+					//- 		td 1
+					//- 		td Blue
+					//- 		td 3:90
+					//- 	tr
+					//- 		td 2
+					//- 		td Green
+					//- 		td 2:09
+					//- 	tr
+					//- 		td 3
+					//- 		td Red
+					//- 		td 8:20
+					//- 	tr
+					//- 		td 4
+					//- 		td Pink
+					//- 		td 9:90
+					//- 	tr
+					//- 		td 5
+					//- 		td Magenta
+							td 2:90
+
+					//- And re-written using a Jade Loop instead
+					//- Create the array
+					each colorName, index in ['Blue','Green','Red','Pink', 'Magenta']
+						//-Create Loop Body 
+						tr
+							td
+								//-Add the variable for the index value. 
+								|#{index + 1}
+							td
+								//-Add the variable for color
+								|#{colorName}
+							td
+								|X:XX
+
+
+
+
+
