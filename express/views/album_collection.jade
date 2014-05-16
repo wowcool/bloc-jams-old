@@ -1,3 +1,25 @@
 extends layouts/player_layout
 
 block content
+
+	//-Add container for the columns
+	.container.collection-container
+		.row.collection-header-container
+			//-Add the Jade Loop
+			- for (var x = 0; x < 33; x++)
+				//-The code I want Jade to loop through and create 33 times...
+				.col-md-2
+					table.table.collection-listing
+							//-Create the table row
+							tr
+								td.cover
+									//-Grab the image, and add the text. 
+									.thumbnail.collectionThumb 
+										img(src="/images/album-placeholder.png") 
+									.albumTitle 
+										a(href="/album") Album Title
+									.artistName
+										a(href="/album") Artist Name
+									.songCount
+										|X Songs
+

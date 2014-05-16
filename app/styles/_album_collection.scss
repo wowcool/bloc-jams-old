@@ -1,2 +1,6 @@
 // SASS for your album collection view
-
+.collection-listing td {border-top:none !important;}
+.albumTitle {@include font-open-sans(300); font-size:16px;}
+.artistName {@include font-open-sans(300); font-size:16px; opacity:.6;}
+.songCount {@include font-open-sans(300); font-size:16px; opacity:.6;}
+.thumbnail {background:none !important;border:none !important;} 

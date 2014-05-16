@@ -279,7 +279,7 @@
 			"contents": "// Create a Saas variable for the default player footer height\n$default-player-footer-height : 5http://0px;\n//Create the player body container class \n.player-body-container { \n	min-height:100%;\n	padding-bottom: $default-player-footer-height;\n	color:white;\n	a {color:white};\n//Pull in a Bourbon color schema\n	@include background(radial-gradient($very-light-background-purple, $dark-background-purple));\n}\n//Style headers and footers\n.default-player-header, .default-player-footer { \n	background-color: rgba($medium-purple, .5);\n}\n//Header only styling\n.default-player-header { \n	@include font-open-sans(600);\n}\n//Footer only styling\n.default-player-footer { \n	height: $default-player-footer-height;\n}",
 			"file": "app/styles/layouts/_player.scss",
 			"file_size": 692,
-			"file_write_time": 1400128029000000,
+			"file_write_time": 1400136285000000,
 			"settings":
 			{
 				"buffer_size": 699,
@@ -290,11 +290,20 @@
 			"contents": "// SASS stylings for the 'album' view.\n// Add margin to the Album Header\n// Question Response : We use a margin instead of a padding because a \n//                     padding will change depending on the width, and \n//					   the margin will stay fixed? difference between \n//					   padding and margin is that margins auto-collapse, \n//					   and padding doesn't.\n.album-header-container { \n	margin-top:55px;\n	margin-bottom:25px;\n}\n//Style Right Side\n.album-header-information { \n	margin-top: 45px; \n	margin-bottom: 20px;\n}\n.album-title, .album-artist, .album-meta-info { \n	line-height: 150%; \n}\n//Set the Album Info Fonts \n.album-title { \n	font-size: 48px; \n	@include font-open-sans(300);\n}\n.album-artist { \n	font-size: 24px; \n	@include font-open-sans(700); \n}\n.album-meta-info { \n	font-size: 16px; \n	@include font-open-sans(500);\n}\n//Style Song Listing \n.table.album-song-listing { \n	@include font-open-sans(300);\n	td { \n		padding: 20px;\n		border-top:\n	}\ntd.time {text-align:right;}\n\n}",
 			"file": "app/styles/_album.scss",
 			"file_size": 1021,
-			"file_write_time": 1400132653000000,
+			"file_write_time": 1400136285000000,
 			"settings":
 			{
 				"buffer_size": 989,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Questions-For-Matt.jade",
+			"settings":
+			{
+				"buffer_size": 694,
+				"line_ending": "Unix",
+				"name": "//- Questions for Matt"
 			}
 		},
 		{
@@ -306,19 +315,26 @@
 			}
 		},
 		{
-			"file": "Questions-For-Matt.jade",
+			"file": "express/views/album_collection.jade",
 			"settings":
 			{
-				"buffer_size": 364,
-				"line_ending": "Unix",
-				"name": "//- Questions for Matt"
+				"buffer_size": 662,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "express/views/layouts/base_layout.jade",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 952,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_album_collection.scss",
+			"settings":
+			{
+				"buffer_size": 374,
 				"line_ending": "Unix"
 			}
 		}
@@ -355,8 +371,8 @@
 	},
 	"file_history":
 	[
-		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/app.scss",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/layouts/base_layout.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/app.scss",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/practice.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/public/stylesheets/app.css",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/test.jade",
@@ -401,7 +417,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 105.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant"
@@ -542,8 +558,8 @@
 						"selection":
 						[
 							[
-								103,
-								103
+								607,
+								578
 							]
 						],
 						"settings":
@@ -580,32 +596,34 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 74.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "express/views/album.jade",
+					"file": "Questions-For-Matt.jade",
 					"settings":
 					{
-						"buffer_size": 1308,
+						"buffer_size": 694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								823,
-								823
+								694,
+								694
 							]
 						],
 						"settings":
 						{
+							"auto_name": "//- Questions for Matt",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
@@ -619,46 +637,18 @@
 				},
 				{
 					"buffer": 6,
-					"file": "Questions-For-Matt.jade",
+					"file": "express/views/album.jade",
 					"settings":
 					{
-						"buffer_size": 364,
+						"buffer_size": 1308,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								363,
-								363
-							]
-						],
-						"settings":
-						{
-							"auto_name": "//- Questions for Matt",
-							"incomplete_sync": null,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 1.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "express/views/layouts/base_layout.jade",
-					"settings":
-					{
-						"buffer_size": 952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								884,
-								884
+								158,
+								129
 							]
 						],
 						"settings":
@@ -667,8 +657,95 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "express/views/album_collection.jade",
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								610,
+								610
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/styles/_album_collection.scss",
+					"settings":
+					{
+						"buffer_size": 374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
