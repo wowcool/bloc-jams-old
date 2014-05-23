@@ -252,81 +252,26 @@
 	"buffers":
 	[
 		{
-			"file": "express/views/layouts/player_layout.jade",
-			"settings":
-			{
-				"buffer_size": 201,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/views/partials/default_player_header.jade",
-			"settings":
-			{
-				"buffer_size": 140,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/views/partials/default_player_footer.jade",
-			"settings":
-			{
-				"buffer_size": 57,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "// Create a Saas variable for the default player footer height\n$default-player-footer-height : 5http://0px;\n//Create the player body container class \n.player-body-container { \n	min-height:100%;\n	padding-bottom: $default-player-footer-height;\n	color:white;\n	a {color:white};\n//Pull in a Bourbon color schema\n	@include background(radial-gradient($very-light-background-purple, $dark-background-purple));\n}\n//Style headers and footers\n.default-player-header, .default-player-footer { \n	background-color: rgba($medium-purple, .5);\n}\n//Header only styling\n.default-player-header { \n	@include font-open-sans(600);\n}\n//Footer only styling\n.default-player-footer { \n	height: $default-player-footer-height;\n}",
-			"file": "app/styles/layouts/_player.scss",
-			"file_size": 692,
-			"file_write_time": 1400136285000000,
-			"settings":
-			{
-				"buffer_size": 699,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "// SASS stylings for the 'album' view.\n// Add margin to the Album Header\n// Question Response : We use a margin instead of a padding because a \n//                     padding will change depending on the width, and \n//					   the margin will stay fixed? difference between \n//					   padding and margin is that margins auto-collapse, \n//					   and padding doesn't.\n.album-header-container { \n	margin-top:55px;\n	margin-bottom:25px;\n}\n//Style Right Side\n.album-header-information { \n	margin-top: 45px; \n	margin-bottom: 20px;\n}\n.album-title, .album-artist, .album-meta-info { \n	line-height: 150%; \n}\n//Set the Album Info Fonts \n.album-title { \n	font-size: 48px; \n	@include font-open-sans(300);\n}\n.album-artist { \n	font-size: 24px; \n	@include font-open-sans(700); \n}\n.album-meta-info { \n	font-size: 16px; \n	@include font-open-sans(500);\n}\n//Style Song Listing \n.table.album-song-listing { \n	@include font-open-sans(300);\n	td { \n		padding: 20px;\n		border-top:\n	}\ntd.time {text-align:right;}\n\n}",
-			"file": "app/styles/_album.scss",
-			"file_size": 1021,
-			"file_write_time": 1400136285000000,
-			"settings":
-			{
-				"buffer_size": 989,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Questions-For-Matt.jade",
 			"settings":
 			{
-				"buffer_size": 694,
-				"line_ending": "Unix",
-				"name": "//- Questions for Matt"
+				"buffer_size": 977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/views/layouts/base_layout.jade",
+			"settings":
+			{
+				"buffer_size": 730,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "express/views/album.jade",
 			"settings":
 			{
-				"buffer_size": 1308,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/views/album_collection.jade",
-			"settings":
-			{
-				"buffer_size": 662,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		},
@@ -334,7 +279,63 @@
 			"file": "app/styles/_album_collection.scss",
 			"settings":
 			{
-				"buffer_size": 374,
+				"buffer_size": 40,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_album.scss",
+			"settings":
+			{
+				"buffer_size": 962,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/views/practice.jade",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/practice.js",
+			"settings":
+			{
+				"buffer_size": 87,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/practice.js",
+			"settings":
+			{
+				"buffer_size": 58,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/controllers/index.coffee",
+			"settings":
+			{
+				"buffer_size": 1129,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/index.coffee",
+			"settings":
+			{
+				"buffer_size": 1706,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/views/album_collection.jade",
+			"settings":
+			{
+				"buffer_size": 678,
 				"line_ending": "Unix"
 			}
 		}
@@ -342,9 +343,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 47.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"package con",
 				"Package Control: Install Package"
@@ -371,7 +376,18 @@
 	},
 	"file_history":
 	[
+		"/Users/JTSeaver/Desktop/modes-for-stephen-2.html",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/_album_collection.scss",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/album_collection.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/album.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/Questions-For-Matt.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/_album.scss",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/layouts/_player.scss",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/scripts/practice.js",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/layouts/base_layout.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/layouts/player_layout.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/partials/default_player_footer.jade",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/partials/default_player_header.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/app.scss",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/practice.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/public/stylesheets/app.css",
@@ -456,23 +472,23 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "express/views/layouts/player_layout.jade",
+					"file": "Questions-For-Matt.jade",
 					"settings":
 					{
-						"buffer_size": 201,
+						"buffer_size": 977,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								199,
-								199
+								976,
+								976
 							]
 						],
 						"settings":
@@ -490,18 +506,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "express/views/partials/default_player_header.jade",
+					"file": "express/views/layouts/base_layout.jade",
 					"settings":
 					{
-						"buffer_size": 140,
+						"buffer_size": 730,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								730,
+								730
 							]
 						],
 						"settings":
@@ -509,7 +525,9 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -519,18 +537,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "express/views/partials/default_player_footer.jade",
+					"file": "express/views/album.jade",
 					"settings":
 					{
-						"buffer_size": 57,
+						"buffer_size": 45,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57,
-								57
+								45,
+								45
 							]
 						],
 						"settings":
@@ -538,28 +556,29 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/styles/layouts/_player.scss",
+					"file": "app/styles/_album_collection.scss",
 					"settings":
 					{
-						"buffer_size": 699,
+						"buffer_size": 40,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								607,
-								578
+								40,
+								40
 							]
 						],
 						"settings":
@@ -580,15 +599,15 @@
 					"file": "app/styles/_album.scss",
 					"settings":
 					{
-						"buffer_size": 989,
+						"buffer_size": 962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								986,
-								986
+								959,
+								959
 							]
 						],
 						"settings":
@@ -600,34 +619,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 74.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "Questions-For-Matt.jade",
+					"file": "express/views/practice.jade",
 					"settings":
 					{
-						"buffer_size": 694,
+						"buffer_size": 766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								694,
-								694
+								698,
+								705
 							]
 						],
 						"settings":
 						{
-							"auto_name": "//- Questions for Matt",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -637,18 +657,18 @@
 				},
 				{
 					"buffer": 6,
-					"file": "express/views/album.jade",
+					"file": "app/scripts/practice.js",
 					"settings":
 					{
-						"buffer_size": 1308,
+						"buffer_size": 87,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								158,
-								129
+								0,
+								87
 							]
 						],
 						"settings":
@@ -656,8 +676,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -667,27 +686,24 @@
 				},
 				{
 					"buffer": 7,
-					"file": "express/views/album_collection.jade",
+					"file": "public/javascripts/practice.js",
 					"settings":
 					{
-						"buffer_size": 662,
+						"buffer_size": 58,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								610,
-								610
+								57,
+								57
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -697,47 +713,49 @@
 				},
 				{
 					"buffer": 8,
+					"file": "express/controllers/index.coffee",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								709,
+								1114
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 205.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "app/styles/_album_collection.scss",
+					"file": "express/index.coffee",
 					"settings":
 					{
-						"buffer_size": 374,
+						"buffer_size": 1706,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								374,
-								374
+								863,
+								863
 							]
 						],
 						"settings":
@@ -745,7 +763,39 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 465.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "express/views/album_collection.jade",
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

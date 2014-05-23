@@ -3,8 +3,8 @@ extends layouts/player_layout
 block content
 	.container.album-container
 		.row.album-header-container
-			.col-md-3
-				img(src="/images/album-placeholder.png")
+			.col-md-3.album-img
+				img(src="")
 			.col-md-9.col-md-push-1
 				.album-header-information
 					h3.album-title The Colors
@@ -13,29 +13,30 @@ block content
 		.row
 			.col-md-12
 				table.table.album-song-listing
+
+
+
+
+
 					
-					//- Create the array
-					each colorName, index in ['Blue','Green','Red','Pink', 'Magenta', 'Burgandy']
-						//-Create Loop Body 
-						tr
-							td
-								//-Add the variable for the index value. 
-								|#{index + 1}
-							td
-								//-Add the variable for color
-								|#{colorName}
-							//-Playing with Jade Mixin's
-							mixin time(length)
-								td.time Track Length : #{length}
-							td
-								+time(3+ ":" + 43)
+					//- Create the array using a loop
+					//- each colorName, index in ['Blue','Green','Red','Pink', 'Magenta', 'Burgandy']
+					//- 	//-Create Loop Body 
+					//- 	tr
+					//- 		td
+					//- 			//-Add the variable for the index value. 
+					//- 			|#{index + 1}
+					//- 		td
+					//- 			//-Add the variable for color
+					//- 			|#{colorName}
+					//- 		//-Playing with Jade Mixin's
+					//- 		mixin time(length)
+					//- 			td.time Track Length : #{length}
+					//- 		td
+					//- 			+time(3+ ":" + 43)
 	
-					
 
-
-
-
-					//- Table Written out without a Loop
+					//- Or, Table Written out without a Loop
 					//- table.table.album-song-listing
 
 					//- 	tr
@@ -61,6 +62,7 @@ block content
 
 					//- And re-written using a Jade Loop instead	
 
+	
 
 
 
