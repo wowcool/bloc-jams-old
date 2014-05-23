@@ -35,11 +35,11 @@ var albumMarconi = {
 
 var createSongRow = function(songNumber, songName, songLength) {
   //Create a variable that is a new table row. 
-  var $newSongRow = $('<tr>');
+  var $newSongRow = $('<tr class="songRow">');
   //Fill the table row, with table data, set with md breakpoint column widths. 
-  $newSongRow.append('<td class ="col-md-1 songRow" id="songNumber">' + songNumber + '</td>');
-  $newSongRow.append('<td class ="col-md-9 songRow">' + songName + '</td>');
-  $newSongRow.append('<td class ="col-md-2 songRow">' + songLength + '</td>');
+  $newSongRow.append('<td class ="col-md-1 songNumber"' + 'data-original="' + songNumber +'">' + songNumber + '</td>');
+  $newSongRow.append('<td class ="col-md-9">' + songName + '</td>');
+  $newSongRow.append('<td class ="col-md-2">' + songLength + '</td>');
   //Return the table row with the album data appended. 
   return $newSongRow;
 };
@@ -95,9 +95,17 @@ if (document.URL.match(/\/album/)) {
     
     //Click Handler
     $songRow.hover(function(event) {
-    var $thisRow = $(this).attr("td", "#songNumber"); 
-    $thisRow.replaceWith('<td class ="col-md-1 songRow" id="songNumber">' + "play" + '</td>'); 
-  });
+      $thisRow = $(this).find('.songNumber');
+      $previous = $thisRow;
+      $thisRow.replaceWith('<td class ="col-md-1 songNumber">' + "<span class=\x27glyphicon glyphicon-play\x27></span>" + '</td>');
+  }, function (event) { 
+      $thisRow = $(this).find('.songNumber');
+      $thisRow.replaceWith($previous);
+
+  } 
+
+
+  );
 
   });
 }
