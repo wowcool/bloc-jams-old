@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"this",
+				"thisPlayButton"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"play",
+				"playButton"
+			],
+			[
+				"x",
+				"x27"
+			],
+			[
+				"song",
+				"songRow"
+			],
+			[
+				"al",
+				"albumImage"
+			],
+			[
+				"songN",
+				"songNumber"
+			],
+			[
+				"albumA",
+				"albumArtUrl"
+			],
+			[
+				"l",
+				"label"
+			],
+			[
 				"random",
 				"randomTime"
 			],
@@ -58,10 +94,6 @@
 			[
 				"ex",
 				"extends"
-			],
-			[
-				"l",
-				"length"
 			],
 			[
 				"get",
@@ -252,18 +284,13 @@
 	"buffers":
 	[
 		{
-			"file": "Questions-For-Matt.jade",
+			"contents": "\n// Example Album 1\nvar albumPicasso = {\n  name: 'The Colors',\n  artist: 'Pablo Picasso',\n  label: 'Cubism',\n  year: '1881',\n  albumArtUrl: '/images/album-placeholder.png',\n\n  songs: [\n      { name: 'Blue', length: '4:26' },\n      { name: 'Green', length: '3:14' },\n      { name: 'Red', length: '5:01' },\n      { name: 'Pink', length: '3:21'},\n      { name: 'Magenta', length: '2:15'}\n    ]\n};\n\n// Example Album 2\nvar albumMarconi = {\n  name: 'The Telephone',\n  artist: 'Guglielmo Marconi',\n  label: 'EM',\n  year: '1909',\n  albumArtUrl: '/images/album-placeholder2.png',\n\n  songs: [\n      { name: 'Hello, Operator?', length: '1:01' },\n      { name: 'Ring, ring, ring', length: '5:01' },\n      { name: 'Fits in your pocket', length: '3:21'},\n      { name: 'Can you hear me now?', length: '3:14' },\n      { name: 'Wrong phone number', length: '2:15'}\n    ]\n};\n\nvar createSongRow = function(songNumber, songName, songLength) {\n  //Create a variable that is a new table row. \n  var $newSongRow = $('<tr class=\"songRow\">');\n  //Fill the table row, with table data, set with md breakpoint column widths. \n  $newSongRow.append('<td class =\"col-md-1 songNumber\"' + 'data-original=\"' + songNumber +'\">' + songNumber + '</td>');\n  $newSongRow.append('<td class =\"col-md-9\">' + songName + '</td>');\n  $newSongRow.append('<td class =\"col-md-2\">' + songLength + '</td>');\n  //Return the table row with the album data appended. \n  return $newSongRow;\n};\n\nvar changeAlbumView = function(album) {\n  //Update the album information\n  var $albumTitle = $('.album-title');\n  $albumTitle.text(album.name);\n\n  var $albumArtist = $('.album-artist');\n  $albumArtist.text(album.artist);\n\n  var $albumMeta = $('.album-meta-info');\n  $albumMeta.text(album.year + \" on \" + album.label);\n\n  var $albumImage = $(\".album-img img\");\n  $albumImage.attr('src', album.albumArtUrl);\n\n  //Update the song listing\n  var $songList = $(\".album-song-listing\");\n  $songList.empty();\n  var songs = album.songs;\n  for (var i = 0; i < songs.length; i++) {\n    //Grabs the data from the song array above in each album. \n    var songData = songs[i];\n    //Fills the newRow variable with the song data, and uses the song position to determine the track number. \n    var $newRow = createSongRow(i,songData.name, songData.length);\n    //Injects the data from the album into the .album-song-listing div\n    $songList.append($newRow);\n  };\n\n};\n\n// This 'if' condition is used to prevent the jQuery modifications\n// from happening on non-Album view pages.\n//  - This line checks if the current url has \"/album\" in its path using a regex.\nif (document.URL.match(/\\/album/)) { \n    \n    // Wait until the HTML is fully processed.\n    $(document).ready(function() {\n    var albums = [albumPicasso, albumMarconi];\n    changeAlbumView(albumPicasso);\n    var albumIndex = 0;\n\n    //Define the location for the Album Image click handler\n    var $albumImage = $('.album-img img');\n    //Click handler\n    $albumImage.click(function(event) {\n      albumIndex = (albumIndex + 1) % albums.length;\n      changeAlbumView(albums[albumIndex]);\n    });\n    \n    //Define the loacation for the row click handler. \n    var $songRow = $('.songRow');\n    //Click Handler ( Hover over row, change play button)\n    $songRow.hover(function(event) {\n      $thisRow = $(this).find('.songNumber');\n      $previous = $thisRow;\n      $thisRow.replaceWith('<td class =\"col-md-1 songNumber\">' + \"<span class=\\x27glyphicon glyphicon-play playButton\\x27></span>\" + '</td>');\n    }, function (event) { \n      $thisRow = $(this).find('.songNumber');\n      $thisRow.replaceWith($previous);\n    });\n\n    //Define click button for the play/pause behavior. \n    var $playButton = $('.playButton');\n    //Click Handler for Play/Pause \n    $playButton.click(function(event){\n      console.log(\"Play Button clicked\");\n      //$thisPlayButton = $(this).find('playButton');\n      $playButton.replaceWith('<td class =\"col-md-1 songNumber\"' + 'data-original=\"' + songNumber +'\">' + \"<span class=\\x27glyphicon glyphicon-pause playButton\\x27></span>\" + '</td>');\n    });\n\n  //End Doc Ready Function\n  });\n}\n",
+			"file": "app/scripts/album.js",
+			"file_size": 4116,
+			"file_write_time": 1400824308000000,
 			"settings":
 			{
-				"buffer_size": 977,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/views/layouts/base_layout.jade",
-			"settings":
-			{
-				"buffer_size": 730,
+				"buffer_size": 4107,
 				"line_ending": "Unix"
 			}
 		},
@@ -271,23 +298,15 @@
 			"file": "express/views/album.jade",
 			"settings":
 			{
-				"buffer_size": 45,
+				"buffer_size": 1360,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/styles/_album_collection.scss",
+			"file": "Questions-For-Matt.jade",
 			"settings":
 			{
-				"buffer_size": 40,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/styles/_album.scss",
-			"settings":
-			{
-				"buffer_size": 962,
+				"buffer_size": 1576,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,39 +314,15 @@
 			"file": "express/views/practice.jade",
 			"settings":
 			{
-				"buffer_size": 766,
+				"buffer_size": 1017,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/practice.js",
+			"file": "express/views/layouts/base_layout.jade",
 			"settings":
 			{
-				"buffer_size": 87,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/javascripts/practice.js",
-			"settings":
-			{
-				"buffer_size": 58,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/controllers/index.coffee",
-			"settings":
-			{
-				"buffer_size": 1129,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "express/index.coffee",
-			"settings":
-			{
-				"buffer_size": 1706,
+				"buffer_size": 897,
 				"line_ending": "Unix"
 			}
 		},
@@ -336,6 +331,38 @@
 			"settings":
 			{
 				"buffer_size": 678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_album_collection.scss",
+			"settings":
+			{
+				"buffer_size": 359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_album.scss",
+			"settings":
+			{
+				"buffer_size": 1021,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "express/views/layouts/player_layout.jade",
+			"settings":
+			{
+				"buffer_size": 201,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/app.js",
+			"settings":
+			{
+				"buffer_size": 9782,
 				"line_ending": "Unix"
 			}
 		}
@@ -376,6 +403,12 @@
 	},
 	"file_history":
 	[
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/public/javascripts/album.js",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/scripts/album.js",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/scripts/practice.js",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/index.coffee",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/controllers/index.coffee",
+		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/public/javascripts/practice.js",
 		"/Users/JTSeaver/Desktop/modes-for-stephen-2.html",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/_album_collection.scss",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/album_collection.jade",
@@ -383,7 +416,6 @@
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/Questions-For-Matt.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/_album.scss",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/styles/layouts/_player.scss",
-		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/app/scripts/practice.js",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/layouts/base_layout.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/layouts/player_layout.jade",
 		"/Users/JTSeaver/Documents/WORK SET/1 SCHOOL/2014 Training/BLOC/bloc-vagrant/bloc-jams/express/views/partials/default_player_footer.jade",
@@ -444,6 +476,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"thisRow",
+			"append",
 			"table-hover",
 			"grey-background orange-text",
 			"download",
@@ -477,18 +511,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Questions-For-Matt.jade",
+					"file": "app/scripts/album.js",
 					"settings":
 					{
-						"buffer_size": 977,
+						"buffer_size": 4107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								976,
-								976
+								3691,
+								3691
 							]
 						],
 						"settings":
@@ -496,7 +530,10 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -506,18 +543,109 @@
 				},
 				{
 					"buffer": 1,
-					"file": "express/views/layouts/base_layout.jade",
+					"file": "express/views/album.jade",
 					"settings":
 					{
-						"buffer_size": 730,
+						"buffer_size": 1360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								730,
-								730
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Questions-For-Matt.jade",
+					"settings":
+					{
+						"buffer_size": 1576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1573,
+								1573
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 488.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "express/views/practice.jade",
+					"settings":
+					{
+						"buffer_size": 1017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "express/views/layouts/base_layout.jade",
+					"settings":
+					{
+						"buffer_size": 897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								810,
+								810
 							]
 						],
 						"settings":
@@ -536,245 +664,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "express/views/album.jade",
-					"settings":
-					{
-						"buffer_size": 45,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/styles/_album_collection.scss",
-					"settings":
-					{
-						"buffer_size": 40,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/styles/_album.scss",
-					"settings":
-					{
-						"buffer_size": 962,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								959,
-								959
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 74.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "express/views/practice.jade",
-					"settings":
-					{
-						"buffer_size": 766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								698,
-								705
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/scripts/practice.js",
-					"settings":
-					{
-						"buffer_size": 87,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								87
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/javascripts/practice.js",
-					"settings":
-					{
-						"buffer_size": 58,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57,
-								57
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "express/controllers/index.coffee",
-					"settings":
-					{
-						"buffer_size": 1129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								709,
-								1114
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 205.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "express/index.coffee",
-					"settings":
-					{
-						"buffer_size": 1706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								863,
-								863
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 465.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "express/views/album_collection.jade",
 					"settings":
 					{
@@ -799,6 +689,125 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/styles/_album_collection.scss",
+					"settings":
+					{
+						"buffer_size": 359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/styles/_album.scss",
+					"settings":
+					{
+						"buffer_size": 1021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "express/views/layouts/player_layout.jade",
+					"settings":
+					{
+						"buffer_size": 201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/javascripts/app.js",
+					"settings":
+					{
+						"buffer_size": 9782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3645.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
