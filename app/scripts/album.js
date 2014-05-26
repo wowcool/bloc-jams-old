@@ -37,7 +37,7 @@ var createSongRow = function(songNumber, songName, songLength) {
   //Create a variable that is a new table row. 
   var $newSongRow = $('<tr class="songRow">');
   //Fill the table row, with table data, set with md breakpoint column widths. 
-  $newSongRow.append('<td class ="col-md-1"><span class="songNumber">' + songNumber + '</span><span class="glyphicon glyphicon-play hidden playButton"></span></td>');
+  $newSongRow.append('<td class ="col-md-1 numberColumn"><span class="songNumber">' + songNumber + '</span><span class="glyphicon glyphicon-play hidden playButton"></span></td>');
   $newSongRow.append('<td class ="col-md-9">' + songName + '</td>');
   $newSongRow.append('<td class ="col-md-2">' + songLength + '</td>');
   //Return the table row with the album data appended. 
@@ -92,42 +92,88 @@ if (document.URL.match(/\/album/)) {
       changeAlbumView(albums[albumIndex]);
     });
     
-    //Define the loacation for the row click handler. 
-    //Example of event delegation 
+    
+
+
+//############################################################################################################################################################
+
+// Example of event delegation with the play and pause button.######//
 
         /*Define the event : 
 
-        We tell JS that .album-song-listing should bubble up an event if there is a mouseenter on it's child element class .songRow, and when that happens, that the event trigger is, itself, or this. 
+        We tell JS that .album-song-listing should bubble up an event if there is a mouseenter on it's child element class .songRow, and when that happens, that the event trigger is, itself, or this. Then, after the dot, says what to do to this, stringing along : 
    
         /*Notice stringing of Jquery here. 
 
         First, when mousing over the .songRow div, it then finds classes within .songRow that have .either the class of .songNumber or .playButton. First,  it finds the class of .songnumber, and add's a class to all those elements with the class of Bootstrasps hidden tag. Then, we tell jQuery to end that task, and start a new one following the ., in this case to find the elements with a class of .playbutton, and _remove_ the class of hidden, thereforemaking it show, and making songNumber dissapear. Stringing jQuery commands.(sic).
         .find(".songNumber").addClass("hidden").end().find(".playButton").removeClass("hidden"); 
-
         
 
-        */
+##############################################################################################################################################################*/
+
+
     $(".album-song-listing").on("mouseenter", ".songRow", function (event) {
-    $(this)}).
-
-      on("mouseleave", ".songRow", function (event) {
+      $(this)
+        .find(".songNumber") // First String...
+        .addClass("hidden") //  2nd String, add a class to .songNumber
+      .end() // Done with .SongNumber, now on to the.playButton
+        .find(".playButton") //Make the button show, after hiding the number.
+        .removeClass("hidden"); // Bootstraps hidden class here.
+        
+        //Then, see how the first function ends, and the next 'on' helper starts in with .on
+    }).on("mouseleave", ".songRow", function (event) {
       var row = $(this);
-      var songNumber = row.find(".songNumber");
+      var songNumber = row.find(".songNumber");//When leaving .songRow, find .songNumber and .playButton
       var playButton = row.find(".playButton");
-
+      //Remove the play button, and put the number back. 
       if (playButton.hasClass("glyphicon-play")) {
         playButton.addClass("hidden");
         songNumber.removeClass("hidden");
       }
+      
+      //If they click the play button, ake it
     }).on("click", ".playButton", function (event) {
       var button = $(this);
+      var row = $(this);
+      var songNumber = row.find(".songNumber");
+      var playButton = row.find(".playButton");
 
       if (button.hasClass("glyphicon-play")) {
         button.removeClass("glyphicon-play").addClass("glyphicon-pause");
       } else {
         button.removeClass("glyphicon-pause").addClass("glyphicon-play");
       }
+    }).on("click", ".playButton", function (event) {
+      var button = $(this);
+      var row = $(this);
+      var container = $(".album-song-listing");
+      var songNumber = row.find(".songNumber");
+      var playButton = row.find(".playButton");
+      var allPauses = container.find(".glyphicon-pause");
+
+      for (var i = 0; i < allPauses.length; i++) {
+        if (allPauses[i] != $(this) && button.hasClass("glyphicon-pause")) { 
+          button.addClass("glyphicon-pause");
+        } else { 
+          button.removeClass("glyphicon-pause");
+        }
+
+      };
+      
     })
+
+    
+
+
+
+  //End Doc Ready Function
+  });
+}
+
+
+  //************************************************************************/
+    //***************** Archived Code, for reference *******************//
+
     //var $songRow = $('.songRow');
     //Click Handler ( Hover over row, change play button)
 
@@ -152,7 +198,3 @@ if (document.URL.match(/\/album/)) {
     //   //$thisplayButton = $(this).find('playButton');
     //   $playButton.replaceWith('<td class ="col-md-1 songNumber pauseButton">' + "<span class=\x27glyphicon glyphicon-pause\x27></span>" + '</td>');
     // });
-
-  //End Doc Ready Function
-  });
-}
