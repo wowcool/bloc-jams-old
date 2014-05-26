@@ -93,15 +93,24 @@ if (document.URL.match(/\/album/)) {
     });
     
     //Define the loacation for the row click handler. 
-    //Example of event delegation
+    //Example of event delegation 
+
+        /*Define the event : 
+
+        We tell JS that .album-song-listing should bubble up an event if there is a mouseenter on it's child element class .songRow, and when that happens, that the event trigger is, itself, or this. 
+   
+        /*Notice stringing of Jquery here. 
+
+        First, when mousing over the .songRow div, it then finds classes within .songRow that have .either the class of .songNumber or .playButton. First,  it finds the class of .songnumber, and add's a class to all those elements with the class of Bootstrasps hidden tag. Then, we tell jQuery to end that task, and start a new one following the ., in this case to find the elements with a class of .playbutton, and _remove_ the class of hidden, thereforemaking it show, and making songNumber dissapear. Stringing jQuery commands.(sic).
+        .find(".songNumber").addClass("hidden").end().find(".playButton").removeClass("hidden"); 
+
+        
+
+        */
     $(".album-song-listing").on("mouseenter", ".songRow", function (event) {
-      $(this)
-        .find(".songNumber")
-        .addClass("hidden") // .songNumber
-      .end() // .songRow
-        .find(".playButton")
-        .removeClass("hidden"); // .playButton
-    }).on("mouseleave", ".songRow", function (event) {
+    $(this)}).
+
+      on("mouseleave", ".songRow", function (event) {
       var row = $(this);
       var songNumber = row.find(".songNumber");
       var playButton = row.find(".playButton");
